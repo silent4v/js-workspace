@@ -1,0 +1,25 @@
+{
+  "env": { "browser": true, "es2021": true, "node": true },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:node/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["dist", "release", "build"],
+  "rules": {
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "node/no-process-env": "warn",
+    "node/no-missing-import": "warn",
+    "node/no-unpublished-import": "warn",
+    "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
+    "no-console": "warn",
+    "no-extra-boolean-cast": "warn",
+    "comma-dangle": ["warn", "always-multiline"],
+    "indent": ["warn", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["warn", "single"],
+    "semi": ["error", "always"]
+  },
+  "settings": { "node": { "tryExtensions": [".js", ".json", ".node", ".ts"] } }
+}
